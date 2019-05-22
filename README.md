@@ -3,6 +3,8 @@ xontrib-histcpy
 Useful aliases and shortcuts for extracting links and text from command
 output history in [xonsh](https://xon.sh).
 
+![xontrib-histcpy in action](https://user-images.githubusercontent.com/11145016/58191616-3cabca80-7cbf-11e9-9472-b8fd74187189.png)
+
 ------
 
 Usage
