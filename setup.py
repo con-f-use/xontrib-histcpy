@@ -1,4 +1,11 @@
+#!/usr/bin/env python
 from setuptools import setup
+
+try:
+    with open('README.md') as fh:
+        long_description = fh.read()
+except (IOError, OSError):
+    long_description = ''
 
 setup(
     name='xontrib-histcpy',
@@ -8,6 +15,8 @@ setup(
     author='con-f-use',
     author_email='con-f-use@gmx.net',
     description="Useful aliases and shortcuts for extracting links and text from command output history in xonsh",
+    long_description=long_description,
+    long_description_content_type='text/markdown',
     packages=['xontrib'],
     package_dir={'xontrib': 'xontrib'},
     package_data={'xontrib': ['*.xsh']},
