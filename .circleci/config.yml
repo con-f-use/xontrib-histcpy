@@ -60,6 +60,7 @@ jobs:
           name: create package
           command: |
             . venv/bin/activate
+            sed -E -i "s/(version\s*=\s*[\"'].*)([\"'].*)/\1+$CIRCLE_SHA1\2/" setup.py
             python setup.py sdist bdist_wheel
       - run:
           name: upload to pypi
