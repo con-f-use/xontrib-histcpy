@@ -14,7 +14,7 @@ workflows:
       #     filters:
       #       tags:
       #         only: /.*/
-      - deploy:
+      - testdeploy:
           # requires:
           #   - test_37
           filters:
@@ -43,7 +43,7 @@ jobs:
   #         command: |
   #           . venv/bin/activate
   #           nox
-  deploy:
+  testdeploy:
     docker:
       - image: circleci/python:3.7
     steps:
@@ -61,7 +61,7 @@ jobs:
             echo -e "[testpypi]" >> ~/.pypirc
             echo -e "index-servers = testpypi" >> ~/.pypirc
             echo -e "username = con-f-use" >> ~/.pypirc
-            echo -e "password = $PYPI_PASSWORD" >> ~/.pypirc
+            echo -e "password = $PYPI_TEST_PASSWORD" >> ~/.pypirc
       - run:
           name: create package
           command: |
