@@ -21,6 +21,9 @@ The same functionality and more is available with the following command aliases 
  * `cpyclip`: Copy one of the last few URLs that a command wrote to stdout to clipboard (Alt+y keybinding)
  * `cpyclip`: Open one of the last few URLs that a command wrote to stdout in your browser (Alt+u keybinding)
 
+If there is only one command/url in history that histcpy could grab,
+it might omit displaying a menu entirely.
+
 Installation
 ============
 
@@ -41,5 +44,9 @@ To automatically load `histcpy` on startup, put
 ```console
 xontrib load histcpy
 ```
-
 in your `.xonshrc`.
+
+Some commands in xonsh's subprocess mode will not be captured by default.
+For those you may enable `$XONSH_STORE_STDOUT=True`. 
+However, that might be buggy or slow.
+
