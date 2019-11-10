@@ -86,7 +86,7 @@ def _histlink_completer(prefix, line, begidx, endidx, ctx):
 def _cpy_clip(args=None, stdin=None, stdout=None):
     if not args:
         return
-    txt = str(args[0]).strip()
+    txt = str(next(iter(args))).strip()
     if txt == '-':
         txt = stdin.read().strip()
     pyperclip.copy(txt)
