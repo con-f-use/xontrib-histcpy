@@ -2,10 +2,17 @@
 """Useful aliases and shortcuts for extracting links and text from command
 output history and putting them into the clipboard."""
 
+
+if __xonsh__.env.get('XONSH_STORE_STDOUT') is not True or __xonsh__.env.get('XONSH_HISTORY_BACKEND') != 'json':
+    raise ValueError('xontrib histcpy cannot be loaded, set `$XONSH_STORE_STDOUT=True` and `$XONSH_HISTORY_BACKEND="json"`')
+
+
 import re
 import pyperclip
 
+
 __all__ = ()
+
 
 ansi_escape = re.compile(r'(\x9B|\x1B\[)[0-?]*[ -/]*[@-~]')  # or colorama
 urlex = re.compile(

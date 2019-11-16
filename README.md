@@ -21,6 +21,10 @@ The same functionality and more is available with the following command aliases 
  * `cpyclip`: Copy one of the last few URLs that a command wrote to stdout to clipboard (Alt+y keybinding)
  * `cpyclip`: Open one of the last few URLs that a command wrote to stdout in your browser (Alt+u keybinding)
 
+Currently, `histcpy` can only work with the default `$XONSH_HISTORY_BACKEND` 
+(i.e. it does not work with the `sqlite` backend, only `json`).
+You also need to set `$XONSH_STORE_STDOUT=True`, obviously.
+
 Installation
 ============
 
@@ -43,3 +47,8 @@ xontrib load histcpy
 ```
 
 in your `.xonshrc`.
+
+ToDo
+====
+
+ * Do an alias+shortcut for getting paths for files and directories and such from history (only existing on filesystem?)
