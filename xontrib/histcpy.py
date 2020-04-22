@@ -160,7 +160,6 @@ __xonsh__.completers.move_to_end('getout', last=False)
 
 try:
     from prompt_toolkit.keys import Keys
-    from xonsh.platform import ptk_shell_type
     @events.on_ptk_create
     def outout_keybindings(prompter, history, completer, bindings, **kw):
         """Register keybindings for cpyhist
@@ -168,7 +167,7 @@ try:
 
             https://python-prompt-toolkit.readthedocs.io/en/master/pages/advanced_topics/key_bindings.html
         """
-        if ptk_shell_type() == "prompt_toolkit2":
+        if __xonsh__.env.get('SHELL_TYPE') in ["prompt_toolkit", "prompt_toolkit2"]:
             handler = bindings.add
         else:
             handler = bindings.registry.add_binding
