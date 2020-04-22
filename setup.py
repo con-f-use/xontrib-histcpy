@@ -20,6 +20,7 @@ setup(
     packages=['xontrib'],
     package_dir={'xontrib': 'xontrib'},
     package_data={'xontrib': ['*.xsh']},
+    install_requires=['pyperclip'],
     platforms='any',
     classifiers=[
         'Environment :: Console',
