@@ -10,7 +10,7 @@ output history in [xonsh](https://xon.sh).
 Usage
 =====
 
-If you use [ptk(2)-prompts](https://python-prompt-toolkit.readthedocs.io/en/master/), `histcpy` will bind the follow shortcuts:
+If you use [prompt toolkit](https://python-prompt-toolkit.readthedocs.io/en/master/), `histcpy` will bind the follow shortcuts:
 
  * <kbd>Alt</kbd> + <kbd>u</kbd>: Open one of the URLs that a previous command wrote to output in your web browser
  * <kbd>Alt</kbd> + <kbd>y</kbd>: Copy one of the URLs to clipboard
@@ -52,3 +52,5 @@ ToDo
 ====
 
  * Do an alias+shortcut for getting paths for files and directories and such from history (only existing on filesystem?)
+ * Make shortcuts configurable
+ * Use `@events.onpostcommand` as fallback if not `XONSH_STORE_STDOUT` (see #14)
