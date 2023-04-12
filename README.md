@@ -54,3 +54,7 @@ ToDo
  * Do an alias+shortcut for getting paths for files and directories and such from history (only existing on filesystem?)
  * Make shortcuts configurable
  * Use `@events.onpostcommand` as fallback if not `XONSH_STORE_STDOUT` (see #14)
+
+Alternative
+===========
+* More powerful alternative is [xontrib-output-search](https://github.com/anki-code/xontrib-output-search).
